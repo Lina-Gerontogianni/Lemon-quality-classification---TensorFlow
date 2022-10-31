@@ -15,7 +15,6 @@ from numpy.random import seed
 seed(42)
 tf.random.set_seed(42)
 
-tf.__version__
 ## Load the lemon dataset
 batch_size = 32
 img_height = 180
