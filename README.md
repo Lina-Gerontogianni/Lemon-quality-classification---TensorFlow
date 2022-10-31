@@ -8,5 +8,7 @@ In this repo you can the Python script is named as lemon_qlt_analysis along with
 The dataset is comprised of 2076 images in total (1125 of good qualit, 951 of bad). For the constructed pipeline, the dataset folder should come in a format where two sub-directories are contained:
 
 dataset/
+
   good_quality/
+  
   bad_quality/
