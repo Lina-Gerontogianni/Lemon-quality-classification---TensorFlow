@@ -16,11 +16,13 @@ seed(42)
 tf.random.set_seed(42)
 
 ## Load the lemon dataset
+data_path = '.../kaggle_datasets/lemon_dataset/dataset'
+
+# Define parameters for the loader
 batch_size = 32
 img_height = 180
 img_width = 180
 
-data_path = '.../kaggle_datasets/lemon_dataset/dataset'
 
 ## Define Training set - 80% of the images
 training_set = tf.keras.utils.image_dataset_from_directory(
