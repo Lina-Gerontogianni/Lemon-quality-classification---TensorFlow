@@ -10,13 +10,18 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 
+# for reproducibility purpose 
+from numpy.random import seed
+seed(42)
+tf.random.set_seed(42)
+
 tf.__version__
 ## Load the lemon dataset
 batch_size = 32
 img_height = 180
 img_width = 180
 
-data_path = '../kaggle_datasets/lemon_dataset/dataset'
+data_path = '/Users/stavroulagerontogianni/Desktop/kaggle_datasets/lemon_dataset/dataset'
 
 ## Define Training set - 80% of the images
 training_set = tf.keras.utils.image_dataset_from_directory(
@@ -78,7 +83,8 @@ cnn.summary()
 ## Train the CNN
 epochs = 20
 
-cnn_training = cnn.fit(training_set, validation_data = validation_set, epochs = epochs)
+cnn_training = cnn.fit(training_set, validation_data = validation_set, 
+                       batch_size = 32, epochs = epochs)
 
 ## Store and visualise the training results
 # accuracy
@@ -91,7 +97,7 @@ val_loss = cnn_training.history['val_loss']
 epochs_range = range(epochs)
 
 ## Accuracy plot
-plt.figure(figsize=(10, 10))
+plt.figure(figsize=(10, 8))
 plt.subplot(1, 2, 1)
 plt.plot(epochs_range, acc, label='Training Accuracy')
 plt.plot(epochs_range, val_acc, label='Validation Accuracy')
