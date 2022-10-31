@@ -9,6 +9,6 @@ The dataset is comprised of 2076 images in total (1125 of good qualit, 951 of ba
 
 dataset/
 
-  good_quality/
+    good_quality/
   
-  bad_quality/
+    bad_quality/
