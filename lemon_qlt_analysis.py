@@ -10,7 +10,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 
-# for reproducibility purpose 
+# for reproducibility purposes 
 from numpy.random import seed
 seed(42)
 tf.random.set_seed(42)
