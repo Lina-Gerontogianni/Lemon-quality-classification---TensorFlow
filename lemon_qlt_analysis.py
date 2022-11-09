@@ -66,7 +66,7 @@ num_categories = len(categ_names)
 
 cnn = Sequential([
     layers.Rescaling(1./255, input_shape=(img_height, img_width, 3)),
-    layers.Conv2D(20, 3, activation = 'relu'),
+    layers.Conv2D(20, 3, input_shape=(img_height, img_width), activation = 'relu'),
     layers.MaxPooling2D(),
     layers.Conv2D(40, 3, activation='relu'),
     layers.MaxPooling2D(),
